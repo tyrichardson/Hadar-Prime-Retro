@@ -1,12 +1,16 @@
 .App {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   text-align: center;
 }
 
 .App-header {
   background-color: #033076;
-  min-height: 70px;
+  min-height: 50px;
   padding: 20px;
-  color: white;
+  color: lightblue
 }
 
 .App-title {
@@ -15,5 +19,25 @@
 
 .App-intro {
   font-size: large;
+}
+
+body {
+  background-color: lightgrey;
+}
+
+ul {
+  margin: 2.5em 0em 0em 0em;
+  padding: 0;
+}
+
+li {
+display: inline-flex;
+width: 50%;
+justify-content: center;
+text-align: center;
+}
+
+.active {
+  color: rgb(238, 238, 213);;
 }
 
