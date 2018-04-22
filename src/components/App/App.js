@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import New from '../New/New.js'
-import View from '../View/View.js'
+import { connect } from 'react-redux';
+import NewR from '../NewR/NewR.js'
+import ViewR from '../ViewR/ViewR.js'
 
 
 class App extends Component {
@@ -18,7 +19,7 @@ class App extends Component {
             <h4><i>Reflection Board</i></h4>
                <ul>
                <li>
-                  <Link to="/New" className="active">Add New Reflection</Link>
+                  <Link to="/NewR" className="active">Add New Reflection</Link>
                  </li>
                  <li >
                    <Link to="/" className="active">View Reflections</Link>
@@ -28,15 +29,19 @@ class App extends Component {
             </header>
           </nav>
           <div>
-        <Route exact path="/" component={View}/>
+        <Route exact path="/" component={ViewR}/>
           </div>
           <div>
-        <Route exact path="/New" component={New}/>
+        <Route exact path="/NewR" component={NewR}/>
         </div>
        </div>
      </Router> 
     );
   }
 }
+
+const mapReduxStateToProps = (reduxState) => ({
+  reduxState
+});
 
 export default App;

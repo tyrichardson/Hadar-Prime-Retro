@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './New.css';
+import './NewR.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { connect } from 'react-redux';
 
-class New extends Component {
+class NewR extends Component {
   render() {
     return (
 
@@ -21,4 +22,8 @@ class New extends Component {
   }
  }
 
-        export default New;
+ const mapReduxStateToProps = (reduxState) => ({
+  reduxState
+});       
+ 
+ export default NewR;

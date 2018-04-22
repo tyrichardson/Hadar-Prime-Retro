@@ -5,9 +5,9 @@ const router = express.Router()
 
   router.post('/', (req, res) => {
     console.log('entered server-side POST', req.body);
-    let newReflection = req.body;
+    let newR = req.body;
     let queryText = `INSERT INTO "reflection" (topic, description) VALUES ($1, $2);`;
-    pool.query(queryText, [newReflection.topic, newReflection.description])
+    pool.query(queryText, [newR.topic, newR.description])
     .then(result => {
       res.sendStatus(201);
     })
