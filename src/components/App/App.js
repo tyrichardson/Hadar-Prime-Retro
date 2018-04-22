@@ -19,10 +19,10 @@ class App extends Component {
             <h4><i>Reflection Board</i></h4>
                <ul>
                <li>
-                  <Link to="/NewR" className="active">Add New Reflection</Link>
+                  <Link to="/NewR" className="navLink active">Add New Reflection</Link>
                  </li>
                  <li >
-                   <Link to="/" className="active">View Reflections</Link>
+                   <Link to="/" className="navLink active">View Reflections</Link>
                  </li>
                </ul>
               <br/>
